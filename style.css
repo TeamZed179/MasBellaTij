@@ -277,6 +277,44 @@ margin-top: 20px;
 }
 
 
+
+
+#about-h{
+
+  display: flex;
+  align-items: center;
+  
+  }
+  #about-h img{
+  
+    width: 50%;
+    height: auto;
+  
+  }
+  #about-h div{
+  padding-left: 40px;
+  }
+  
+  #about-vi{
+    text-align: center;
+  
+  
+  }
+  #about-vi .video{
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+  
+  }
+  
+  #about-vi .video video{
+    width: 100%;
+    height: 100%;
+    border-radius: 55%;
+  
+  }
+
+
 @media (max-width:799px){
   #navbar {
     display: flex;
@@ -361,7 +399,7 @@ padding-left: 20px;
 
 
 #hero2{
-  background-image: url("img/banner/banner.png");
+  background-image: url("img/banner.png");
   height: 40vh;
   width: 100%;
   background-size: cover;
@@ -535,4 +573,21 @@ padding-left: 20px;
   width: 100%;
   
 }
+
+#about-h{
+  flex-direction: column;
+  align-items: center; 
+  }
+
+
+  #about-h img{
+    width: 150%;
+  }
 }
+
+
+
+
+
+
+
