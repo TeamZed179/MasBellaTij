@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+/*header*/
+#header{
+  display:flex ;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  background-color: rgb(235, 213, 216);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navbar{
+  display: flex;
+  justify-content: center;
+  
+
+
+}
+#navbar li{
+  padding: 0 20px;
+  list-style: none;
+  position: relative;
+}
+
+#navbar li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  transition: 0.5s ease;
+}
+
+#navbar li a:hover {
+color: indianred;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: indianred;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+ content: "";
+  width: 50px;
+  height: 2px;
+  background:indianred ;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+#navbar.active{
+  right: 0px;
+
+}
+#mobile{
+  display: none;
+}
+#close{
+  display: none;
+}
+
+
+/*hola edward si ves esto holi aqui empieza el hero 1 XD*/
+#hero{
+  background-image: url("img/hero4.png");
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding: 0 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 50%;
+
+}
+
+#hero h4{
+  padding-bottom: 15px ;
+
+}
+#hero h1{
+  color: darkcyan;
+}
+
+#hero button{
+background-image: url("img/button.png");
+background-color: transparent;
+border: 0;
+padding: 14PX 80px 14px 65px;
+background-repeat: no-repeat;
+text-align: left;
+cursor: pointer;
+font-weight: 700;
+color:hotpink;
+
+
+}
+
+#productos1{
+  padding-top: 15px;
+  text-align: center;
+}
+
+#productos1 .contenedor{
+display: flex;
+justify-content: space-between;
+padding-top: 20px ;
+flex-wrap: wrap;
+}
+
+#productos1 .pro{
+  width:23% ;
+  min-width: 250px;
+  padding: 10px 12 px;
+  border: 1px solid;
+  border-color:rgb(216, 189, 189);
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0 ;
+  transition: 0,3s ease;
+}
+#productos1 .pro img{
+  width: 100%;
+  border-radius: 20px;
+
+}
+#productos1 .pro:hover{
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+
+}
+
+#banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ background-image: url(img/banner/b2.jpg);
+ height: 40vh;
+ width: 100%;
+ background-size: cover;
+ 
+}
+
+#banner h4{
+  color: white;
+  font-size: 16px;
+}
+
+
+#banner h2{
+  color: white;
+  font-size: 30px;
+  padding: 10px 0 ;
+}
+
+button.NORMAL{
+  font-size: 14px;
+  font-weight: 600px ;
+  padding: 15px 30px;
+  color: black;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+
+}
+#banner button:hover{
+
+  background-color: aqua;
+  color: white;
+
+}
+#mini{
+  display: flex;
+ justify-content: space-around;
+  flex-wrap: wrap;
+  
+
+}
+
+#mini .banner-box{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+ background-image: url(img/banner/b17.jpg);
+ height: 50vh;
+ min-width: 780px;
+ background-size: cover;
+ border-radius: 25px;
+padding-left: 30px;
+
+}
+
+#mini .banner-box1{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+ background-image: url(img/banner/b18.jpg);
+ height: 50vh;
+ min-width: 780px;
+ background-size: cover;
+ border-radius: 25px;
+padding-left: 30px;
+}
+
+#mini h4{
+  color: white;
+  font-size: 300px;
+  font-weight: 300;
+}
+
+@media (max-width:799px){
+  #navbar {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: azure;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.02) ;
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+}
+#navbar li{
+  margin-bottom: 25px;
+}
+#mobile{
+  display: flex;
+  align-items: center;
+}
+#mobile i{
+color:black;
+font-size: 24px;
+padding-left: 20px;
+}
+#close {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: black;
+  font-size: 20px;
+  display: initial;
+}
+#hero{
+ height: 70vh;
+ padding: 0 80px;
+ background-position: top 30% right 30%;
+
+}
+#productos1 .contenedor {
+  justify-content: center;
+  
+}
+
+#productos1 .pro {
+  margin: 15px;
+}
+
+#mini h4 {
+  color: white;
+  font-size: 200px;
+  font-weight: 300;  
+}
+#mini .banner-box {
+ margin: 15px;
+}
+#mini .banner-box1 {
+ margin: 10px;
+}
+
+#banner {
+ max-height: 20vh;
+}
+}
+@media(max-whidth: 477px){
+  #header{
+    padding: 20px 20px;
+  }
+
+  #hero {
+    height: 70vh;
+    padding: 0 30px;
+    background-position: top 30% right 30%;
+}
+
+
+.logo{
+  max-width: 20vh;
+  max-height: 15vh;
+}
+
+#admin-menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.menu-container {
+    width: 80%;
+}
+
+.menu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item {
+    flex: 1;
+    text-align: center;
+}
+
+.menu-item img {
+    max-width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
+}
+
+.menu-item button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff69b4; /* Cambia el color del botón según tu preferencia */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-item button:hover {
+    background-color: #e60073; /* Cambia el color al pasar el cursor sobre el botón */
+}
+}

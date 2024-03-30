@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mas Bella</title>
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <section id="header">   
+            <a  href="index.html" ><img  src="img/logo.png" class="logo" alt=""</a>
+             <div> 
+                <ul id="navbar">
+                    <li><a href="index.html" class="active">home</a></li>
+                    <li><a href="tienda.html">catalogo</a></li>
+                    <li><a href="">home3</a></li>
+                    <li><a href="">home4</a></li>
+                    <a href="#" id="close"><i class="far fa-times"></i></a>
+                     </ul>
+             </div>
+             <div id="mobile">
+                <i id="bar" class="fas fa-outdent"></i>
+             </div>
+             
+            
+        </section>
+
+<section id="prodetails" class="section-p1">
+
+    <div class="img-ind">
+        <img src="img/products/hydra.jpg" width="100%" id="mainimg" alt="">
+            <div class="small-img-group">
+                <div class="small-img-col">
+<img src="img/products/hidra2.jpg" width="100%" class="small-img" alt="">
+                </div>
+              <div class="small-img-col">
+<img src="img/products/hydra.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+<img src="img/products/f3.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+<img src="img/products/f4.jpg" width="100%" class="small-img" alt="">
+                </div>
+                
+            </div>
+        </div>
+
+    <div class="single-pro-details">
+        <h6>asddasdasd</h6>
+        <h4>adsadasd</h4>
+        <h2>adsadasd</h2>
+
+        <h4>descripcion</h4>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam laboriosam repellat, distinctio iusto laudantium, aliquid esse eius recusandae libero reprehenderit illum excepturi sit reiciendis aut iste modi ipsum, quaerat similique.</span>
+</div>
+</section>
+
+<script>
+var mainimg = document.getElementById("mainimg");
+var small = document.getElementsByClassName("small-img");
+
+small[0].onclick = function(){
+    mainimg.src = small[0].src;
+}
+small[1].onclick = function(){
+    mainimg.src = small[1].src;
+}
+
+small[2].onclick = function(){
+    mainimg.src = small[2].src;
+}
+
+small[3].onclick = function(){
+    mainimg.src = small[3].src;
+}
+
+</script>
+
+<script src="script.js"></script>
+</body>
+
+</html>

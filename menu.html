@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="sesion.js"></script>
+    <link rel="stylesheet" href="Produc.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas Bella Administrador</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-image: url('ban.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        
+        #header {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+        
+        #admin-menu-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        
+        .admin-menu {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+        }
+        
+        .admin-menu h1,
+        .admin-menu h2 {
+            color: white;
+        }
+        
+        .admin-menu button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .admin-menu button:hover {
+            background-color: #e60073;
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+            </ul>
+        </div>
+    </section>
+
+    <section id="admin-menu-container">
+        <div class="admin-menu">
+            <h1>Bienvenido Administrador</h1>
+            <button id="cerrarSesion" onclick=cerrarSesion()>Cerrar Sesión</button>
+            <p></p>
+            <table align="center" border="0">
+                <tr>
+                    <td><img src="iconos/añadir.png" width="110" height="100"><br></td>
+                    <td><img src="iconos/eliminar.png" width="110" height="100"><br></td>
+                    <td><img src="iconos/registro.png" width="110" height="100"><br></td>
+                </tr>
+                <tr>
+                    <td><button onclick="location.href='ingresoProducto.html'">Ingresar productos</button></td>
+                    <td><button onclick="location.href='#'">Eliminacion de producto</button></td>
+                    <td><button onclick="location.href='#'">Modificacion de producto</button></td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        validarSesion();
+    });
+    
+    function validarSesion() {
+        fetch('procesar_login.php')
+        .then(response => {
+            if (!response.ok) {
+                window.location.href = 'Login.html';
+            }
+        })
+        .catch(error => {
+            console.error('Error al verificar la sesión:', error);
+        });
+    }
+    </script>
+</body>
+</html>

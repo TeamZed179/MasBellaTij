@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="sesion.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Producto</title>
+    <link rel="stylesheet" href="Prod.css">
+    <style>
+        section {
+            text-align: center;
+            color: #fff; 
+        }
+
+        .inline-flex-container {
+            display: flex;
+            align-items: center; 
+        }
+
+        .inline-flex-container label {
+            margin-right: 10px; 
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Añadir Producto</h1>
+    </header>
+    <main>
+        <section class="grid-container">
+            <form action="Base.php" method="post" class="grid-item" enctype="multipart/form-data" id="productForm">
+                <label for="imagen">Imagen del Producto:</label><br>
+                <input type="file" id="imagen" name="imagen" accept="image/*"><br>
+                <br>
+                
+                <label for="nombre">Nombre del Producto:</label><br>
+                <input type="text" id="nombre" name="nombre"><br>
+
+                <label for="descripcion">Descripción:</label><br>
+                <textarea id="descripcion" name="descripcion" rows="4" cols="50" ></textarea><br>
+
+                <label for="precio">Precio:</label><br>
+                <input type="number" id="precio" name="precio" step="0.01" ><br>
+
+                <label for="existencias">Existencias:</label><br>
+                <input type="number" id="existencias" name="existencias" ><br>
+
+                <div class="inline-flex-container">
+                    <input type="checkbox" id="descuento_check" name="descuento_check" onchange="toggleDescuento()">
+                    <label for="descuento_check">¿Aplicar Descuento?</label>
+                </div>
+
+                <label for="descuento">Descuento (%):</label><br>
+                <input type="number" id="descuento_input" name="descuento" step="0.01" disabled><br> 
+
+                <button type="submit">Agregar Producto</button>
+            </form>
+   
+        </section>             
+        <button onclick="location.href='menu.html'">Regresar</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mas bella | Pagina de prueba</p>
+    </footer>
+    <script>
+        function toggleDescuento() {
+            var descuentoInput = document.getElementById("descuento_input");
+            var descuentoCheckbox = document.getElementById("descuento_check");
+            
+            if (descuentoCheckbox.checked) {
+                descuentoInput.disabled = false;
+            } else {
+                descuentoInput.disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>
